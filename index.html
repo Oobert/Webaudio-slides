@@ -29,6 +29,8 @@
 				link.href = 'css/print/pdf.css';
 				document.getElementsByTagName( 'head' )[0].appendChild( link );
 			}
+
+
 		</script>
 
 		<!--[if lt IE 9]>
@@ -43,17 +45,15 @@
 			<!-- Any section element inside of this container is displayed as a slide -->
 			<div class="slides">
 				<section>
-					<h3>Join us!</h3>
-					irc.freenode.net<br/>
-					#devmke<br/>
-					IRC Howto: <a href="http://goo.gl/IkHsqD">http://goo.gl/IkHsqD</a>
-				</section>
-			
-				<section>
-					<h1>Rocking with Web Audio API</h1>
+                    <img src="images/animated-owl-image-0035.gif" style="  height: 128px;  border: none;  background-color: #111;  position: absolute;  top: -23%;  left: 81.5%;  z-index: -1;"/>
+					<h2>Stories of Web Audio by the Campfire</h2>
 					<p>
 						<small>Created by <a href="http://geekwithopinions.com">Tony Gemoll</a></small>
 					</p>
+                    <img style="background-color: #111111;  border: none; height: 192px; width: 192px" src="images/fire.gif" />
+                    <aside class="notes">
+                        Turn power settings to preformance.<br/>
+                    </aside>
 				</section>
 
 				<section>
@@ -521,6 +521,45 @@ function gotStream(stream){
 				]
 			});
 
+
+            var fireSound = new Audio('sounds/Crackling_Fire.mp3');
+            fireSound.loop = true;
+            fireSound.volume = .25;
+
+            var owlSound = new Audio('sounds/horned_owl-Mike_Koenig-1945374932.mp3');
+            owlSound.volume = .3;
+            var owlInterval = undefined;
+
+            var nightSounds = new Audio('sounds/Night_Sounds_-_Crickets-Lisa_Redfern-591005346.mp3');
+            nightSounds.loop = true;
+            nightSounds.volume = .1;
+
+            if (Reveal.isFirstSlide()){
+                fireSound.play();
+                nightSounds.play();
+                owlInterval = setInterval(function() {
+                    owlSound.play();
+                }, 15000);
+
+
+            }
+
+            Reveal.addEventListener( 'slidechanged', function( event ) {
+                // event.previousSlide, event.currentSlide, event.indexh, event.indexv
+                if (Reveal.isFirstSlide()){
+                    fireSound.play();
+                    nightSounds.play();
+                    owlInterval = setInterval(function() {
+                        owlSound.play();
+                    }, 15000);
+
+                }
+                else {
+                    fireSound.pause();
+                    nightSounds.pause();
+                    clearInterval(owlInterval);
+                }
+            } );
 		</script>
 
 	</body>
