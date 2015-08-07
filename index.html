@@ -72,7 +72,7 @@
 					</p>
                     <img style="background-color: #111111;  border: none; height: 192px; width: 192px" src="images/fire.gif" />
                     <aside class="notes">
-                        Turn power settings to preformance.<br/>
+                        Turn power settings to performance.<br/>
                     </aside>
 				</section>
 
@@ -83,7 +83,10 @@
 						Lead Application Developer at <a href="http://www.morethanrewards.com">More Than Rewards</a> <br/>
 						Blog: <a href="http://geekwithopinions.com">http://geekwithopinions.com</a> <br/>
 						Twitter: <a href="https://twitter.com/oobert">@Oobert</a><br />
+						Organize <a href="http://www.meetup.com/milwaukeejs/" >Milwaukee JavaScript Meetup</a><br/>
+						<br/>
 						Slack: <a href="http://mke-slack.herokuapp.com/" >http://mke-slack.herokuapp.com/</a><br/>
+						
 					</p>
 
 					<aside class="notes">
@@ -122,6 +125,7 @@
 					
 					<aside class="notes">
 						Flash came and things got better<br/>
+							-got things like youtube, spotify, games<br/>
 						Downsides is that it is flash, requires browsers plugins, and need to know another language <br/>
 					</aside>
 				</section>
@@ -145,7 +149,8 @@
 					<aside class="notes">
 						New html element. <br/>
 						Supported most everywhere <br/>
-						Is not terribly useful on its own <br/>
+						Simply a audio player <br/>
+						-suppoerts play, pause, seek, volume, loop, autoplay, and controls.<br/>
 						Does give cross browser support for audio playing in the browser
 					</aside>
 				</section>
@@ -207,6 +212,10 @@ var canPlay = audio.canPlayType("audio/mp3")
 //maybe - browser may support this type.
 //probably - browser most likely supports this type
 					</pre>
+					
+					<aside class="notes">
+						Best API in the world!
+					</aside>
 				</section>				
 				
 				<section>
@@ -216,7 +225,7 @@ var canPlay = audio.canPlayType("audio/mp3")
 						New JS APIs <br/>
 						Support is decent <br/>
 						Cross browser support manipulating audio<br/>
-						IE is working on support
+						IE... sigh... Work has not started, only "Under Consideration"
 					</aside>
 				</section>
 				
@@ -224,7 +233,7 @@ var canPlay = audio.canPlayType("audio/mp3")
 					<h3>How it works</h3>
 					<image src="images/web-audio-api-flowchart.png"></img> <br/>
 					<aside class="notes">
-						Graph<br/>
+						Modular Graph<br/>
 						Legos<br/>
 						Different Threads
 						Demo later<br/>
@@ -247,6 +256,7 @@ var canPlay = audio.canPlayType("audio/mp3")
 						AudioBufferSourceNode: Load audio from buffer<br/>
 						MediaElementAudioSourceNode: Load audio from an audio element<br/>
 						MediaStreamAudioSourceNode: Load audio from microphone<br/>
+						Midi
 					</aside>
 					
 				</section>
@@ -276,7 +286,7 @@ var canPlay = audio.canPlayType("audio/mp3")
 					<li>DelayNode</li>
 					<li>GainNode</li>
 					<li>ScriptProcessorNode</li>
-					<li>Plus many others</li>
+					<li>Plus others</li>
 					</ul>
 					
 					<aside class="notes">
@@ -452,10 +462,11 @@ audioContext.decodeAudioData(audioData, function(buffer) {
 					<h1>Performance?</h1>					
 					
 					<a href="http://webaudiodemos.appspot.com/TouchPad/index.html" target='_blank'>Touch!</a><br/>
-					<a href="http://labs.dinahmoe.com/plink/" target='_blank'>Plink!</a> <br/>
+					<a href="http://labs.dinahmoe.com/plink/" target='_blank'>Plink!</a> - http://goo.gl/tofSAF <br/>
 					
 					<aside class="notes">
-						Yes
+						Plink? Join me! <br/>
+						Multiple Audio samples need to be loaded if you want to play the same thing at the same time.
 					</aside>
 				</section>
 				
@@ -470,7 +481,7 @@ audioContext.decodeAudioData(audioData, function(buffer) {
 				
 				<section>
 					<h3>Record Audio</h3>					
-					<a href="http://webaudiodemos.appspot.com/AudioRecorder/index.html" target='_blank'>Demo</a><br/>		
+					<a href="https://webaudiodemos.appspot.com/AudioRecorder/index.html" target='_blank'>Demo</a><br/>		
 
 					<pre class="brush: js; class-name: 'max-height'">
 /*Get user media (mic access)*/
@@ -507,6 +518,10 @@ function gotStream(stream){
 					<a href="https://triggerrally.com" target='_blank'>Games!</a> <br/>
 					<a href="http://techcrunch.com/2014/07/22/mozillas-asm-js-technology-makes-its-commercial-debut-with-dungeon-defenders-for-the-web/" target='_blank'>No Really Games!</a> <br/>
 					
+					<aside class="notes">
+						Trigger rally - audio uses web audio. Engine news made by changing frequencies of sound.
+						Dungeon Defenders - ASM.js + web audio.
+					</aside>
 				</section>
 				
 				<section>
@@ -515,7 +530,8 @@ function gotStream(stream){
 					<aside class="notes">
 							Think native. <br/>
 							Real time web. <br/>
-							Examples: Messages, updates, feedback of errors or success, status that process is done
+							Examples: Messages, updates, feedback of errors or success, status that process is done<br/>
+							Vibration api.
 					</aside>
 				</section>
 				
@@ -540,8 +556,12 @@ function gotStream(stream){
 						Tony Gemoll - <a href="mailto:tony.gemoll@gmail.com">tony.gemoll@gmail.com</a> <br/>
 						Blog: <a href="http://geekwithopinions.com">http://geekwithopinions.com</a> <br/>
 						Twitter: <a href="https://twitter.com/oobert">@Oobert</a><br />
-						Slack: <a href="http://mke-slack.herokuapp.com/" >http://mke-slack.herokuapp.com/</a><br/>
+						Slack: <a href="http://mke-slack.herokuapp.com/" >http://mke-slack.herokuapp.com/</a><br/>						
 					</p>
+					<br/>
+					<h3>MORE INFO</h3>
+					<a href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Audio_API" target="_blank">https://developer.mozilla.org/en-US/docs/Web/API/Web_Audio_API</a><br/>
+					<a href="http://webaudiodemos.appspot.com/">http://webaudiodemos.appspot.com/</a><br/>
 				</section>
 				
 			</div>
